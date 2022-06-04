@@ -11,5 +11,3 @@ if sum==mul:
     print("Spy Number")
 else:
     print("Not Spy Number")
-    
-    
