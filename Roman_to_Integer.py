@@ -14,7 +14,6 @@ def value(r):
     if (r=='M'):
         return 1000
     return -1
- 
 def roman(str):
     res=0
     i=0
