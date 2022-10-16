@@ -1,9 +1,5 @@
-a=list(map(str,input().split()))
+n=input()
 l=[]
-for i in a:
-    c=0
-    for j in i:
-        c+=1
-    l.append(c)
-    c=0
+for i in n.split():
+    l.append(len(i))
 print(min(l))
