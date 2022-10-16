@@ -1,3 +1,10 @@
-s=input()
-l=list(s.split(" "))
-print(min(l[0]),max(l[-1]))
+n=input().split()
+x=n[0]
+y=n[(len(n)-1)]
+l=[]
+p=[]
+for i in x:
+    l.append(ord(i))
+for j in y:
+    p.append(ord(j))
+print(chr(min(l)),chr(max(p)))
