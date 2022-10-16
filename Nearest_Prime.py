@@ -1,31 +1,21 @@
-def prime(a):
-    c=0
-    for i in range(1,a+1):
-        if a%i==0:
-            c+=1
-    if c==2:
-        return 1
+def isprime(n):
+    if n==1:
+        return False
     else:
-        return 0
-def near(a):
-    l=f=dl=df=0
-    for i in range(a,0,-1):
-        if prime(i)==1:
-            f=i
-            df=a-i
-            break
-    for i in range(a,10000):
-        if prime(i)==1:
-            l=i
-            dl=i-a
-            break
-    if df==dl:
-        return f
-    elif df>dl:
-        return l
-    elif df<dl:
-        return f
+        for i in range(2,int(n**0.5)+1):
+            if n%i==0:
+                return False
+        return True
 t=int(input())
 for i in range(t):
-    a=int(input())
-    print(near(a))
+    n=int(input())
+    f,b=n,n
+    while not isprime(f) and not isprime(b):
+        f+=1
+        b-=1
+    if isprime(f) and isprime(b):
+        print(min(f,b))
+    elif isprime(f):
+        print(f)
+    else:
+        print(b)
