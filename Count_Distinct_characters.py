@@ -1,8 +1,7 @@
-s=input()
-s=s.lower()
-k=set(s)
-g=[]
-for i in k:
-    if i!=" ":
-        g.append(i)
-print(len(g))
+n=input().lower().split()
+n="".join(n)
+x=""
+for i in n:
+    if i not in x:
+        x+=i
+print(len(x))
