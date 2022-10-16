@@ -1,12 +1,12 @@
-n,m=map(int,input().split())
-a=list(map(int,input().split()))
-b=list(map(int,input().split()))
+a,b=map(int,input().split())
+l=list(map(int,input().split()))
+m=list(map(int,input().split()))
 c=0
-for i in list(set(a)):
-    if b.count(i)==0:
-        c+=1
-for j in list(set(b)):
-    if a.count(j)==0:
-        c+=1
-print(c)
-    
+d=[]
+for i in l:
+    if i not in m and i not in d:
+        d.append(i)
+for i  in m:
+    if i not in l and i not in d:
+        d.append(i)
+print(len(d))
