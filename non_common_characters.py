@@ -1,15 +1,16 @@
-s1=input()
-s2=input()
-s1=s1.lower()
-s2=s2.lower()
-k=list(set(s1))
-l=list(set(s2))
-m=[]
-for i in k:
-    if i not in l and i not in m and i!=" ":
-        m.append(i)
+s1=input().lower().split()
+s1="".join(s1)
+s2=input().lower().split()
+s2="".join(s2)
+l=[]
+x=[]
+for i in s1:
+    if i not in s2:
+        l.append(i)
+for i in s2:
+    if i not in s1:
+        l.append(i)
 for i in l:
-    if i not in k and i not in m and i!=" ":
-        m.append(i)
-m.sort()
-print("".join(m))
+    if i not in x:
+        x.append(i)
+print("".join(sorted(x)))
