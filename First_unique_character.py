@@ -1,8 +1,9 @@
-s=input()
-s=s.lower()
-for i in s:
-    if s.count(i)==1 and i!=" ":
+a=input().lower()
+c=0
+for i in a:
+    if a.count(i)==1:
         print(i)
+        c+=1
         break
-else:
+if c==0:
     print(-1)
