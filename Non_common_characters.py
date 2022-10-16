@@ -1,15 +1,16 @@
-s1=input()
-s2=input()
-s1=s1.lower()
-s2=s2.lower()
-s=""
-c=0
+s1=input().lower().split()
+s1="".join(s1)
+s2=input().lower().split()
+s2="".join(s2)
+l=[]
+x=[]
 for i in s1:
-    if i not in s2 and i not in s and i!=" ":
-        s+=i
-        c+=1
+    if i not in s2:
+        l.append(i)
 for i in s2:
-    if i not in s1 and i not in s and i!=" ":
-        s+=i
-        c+=1
-print(c)
+    if i not in s1:
+        l.append(i)
+for i in l:
+    if i not in x:
+        x.append(i)
+print(len(x))
