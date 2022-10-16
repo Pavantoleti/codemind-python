@@ -1,8 +1,7 @@
-s=input()
-s=s.lower()
-k=list(set(s))
-k.sort()
-for i in k:
-    if i==" ":
-        del k[k.index(i)]
-print("".join(k))
+n=input().lower().split()
+n="".join(n)
+x=""
+for i in n:
+    if i not in x and n.count(i)<=1:
+        x+=i
+print("".join(sorted(x)))
