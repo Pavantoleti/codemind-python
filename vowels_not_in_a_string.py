@@ -1,10 +1,9 @@
-s=input()
-v="aeiou"
-b=[]
-for i in v:
-    if i not in s and i not in b:
-        b.append(i)
-if len(b)==0:
-    print(0)
+n=input()
+v=list("aeiou")
+for i in n:
+    if i in v:
+        v.remove(i)
+if len(v)!=0:
+    print(*v)
 else:
-    print(*b)
+    print(0)
